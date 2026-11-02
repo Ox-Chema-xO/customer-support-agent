@@ -1,0 +1,23 @@
+[project]
+name = "csai"
+version = "0.1.0"
+description = "Customer support AI agent built with Strands Agents and Amazon Bedrock AgentCore"
+requires-python = ">=3.13"
+# Agent runtime libraries are pinned to the versions the agent was tested with:
+# `agentcore deploy` (direct_code_deploy) resolves this file with
+# `uv pip compile`, i.e. the latest PyPI releases, ignoring uv.lock. In
+# particular strands-agents-tools 0.9.0 turns AgentCoreBrowser into an
+# ImportError, which would stop the deployed agent from starting.
+dependencies = [
+    "boto3",
+    "PyYAML",
+    "bedrock-agentcore==1.25.2",
+    "bedrock-agentcore-starter-toolkit>=0.3.0",
+    "chardet>=6.0.0.post1",
+    "mcp==2.3.0",
+    "nest-asyncio>=1.6.0",
+    "playwright>=1.58.0",
+    "strands-agents==1.63.0",
+    "strands-agents-tools==0.8.11",
+    "urllib3>=2.6.3",
+]

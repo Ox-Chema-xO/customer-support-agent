@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# AgentCore starter toolkit: local deployment config and build cache
+.bedrock_agentcore/
+.bedrock_agentcore.yaml
+
+# Partial test runs (scripts/run_tests.py with a test number)
+docs/test-transcript-tests-*.md
+
+# Local logs
+*.log
